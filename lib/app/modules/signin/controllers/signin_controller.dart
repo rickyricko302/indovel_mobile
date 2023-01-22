@@ -1,9 +1,8 @@
 import 'package:get/get.dart';
 
 class SigninController extends GetxController {
-  //TODO: Implement SigninController
+  RxBool isShowPassword = false.obs;
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -19,5 +18,7 @@ class SigninController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void changeVisibility() {
+    isShowPassword.value = !isShowPassword.value;
+  }
 }
