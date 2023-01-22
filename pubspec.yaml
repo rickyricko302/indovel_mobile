@@ -13,6 +13,7 @@ dependencies:
   flutter_svg: ^1.1.6
   google_fonts: ^3.0.1
   flutter_animate: ^3.0.0
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies: 
   flutter_lints: ^2.0.0

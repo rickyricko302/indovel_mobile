@@ -152,7 +152,9 @@ class SigninView extends GetView<SigninController> {
                               style: ElevatedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(30))),
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.toNamed(Routes.DASHBOARD);
+                              },
                               child: Text(
                                 "Login",
                                 style: GoogleFonts.nunito(fontSize: 18),

@@ -1,9 +1,8 @@
 import 'package:get/get.dart';
 
 class DashboardController extends GetxController {
-  //TODO: Implement DashboardController
+  RxInt pageSelected = 0.obs;
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -19,5 +18,7 @@ class DashboardController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void changePage(int page) {
+    pageSelected.value = page;
+  }
 }
