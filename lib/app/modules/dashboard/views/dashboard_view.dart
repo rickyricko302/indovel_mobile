@@ -21,7 +21,7 @@ class DashboardView extends GetView<DashboardController> {
             statusBarIconBrightness: Brightness.dark),
       ),
       body: PageView(
-        children: [HomeView()],
+        children: const [HomeView()],
       ),
       bottomNavigationBar: Obx(() => BottomNavigationBar(
               type: BottomNavigationBarType.fixed,

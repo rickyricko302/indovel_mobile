@@ -28,7 +28,7 @@ class SigninView extends GetView<SigninController> {
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 50, left: 20, right: 20),
+                margin: const EdgeInsets.only(top: 50, left: 20, right: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -41,8 +41,8 @@ class SigninView extends GetView<SigninController> {
                             fontWeight: FontWeight.bold),
                       )
                           .animate()
-                          .fadeIn(duration: Duration(seconds: 1))
-                          .moveX(duration: Duration(seconds: 1)),
+                          .fadeIn(duration: const Duration(seconds: 1))
+                          .moveX(duration: const Duration(seconds: 1)),
                     ),
                     Animate(
                       child: SvgPicture.asset(
@@ -50,29 +50,29 @@ class SigninView extends GetView<SigninController> {
                         width: 50,
                         height: 100,
                       ),
-                    ).animate().fadeIn(duration: Duration(seconds: 1)),
+                    ).animate().fadeIn(duration: const Duration(seconds: 1)),
                   ],
                 ),
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(top: 50),
-                  decoration: BoxDecoration(
+                  margin: const EdgeInsets.only(top: 50),
+                  decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(40),
                           topRight: Radius.circular(40))),
                   width: double.infinity,
-                  padding: EdgeInsets.symmetric(horizontal: 35),
+                  padding: const EdgeInsets.symmetric(horizontal: 35),
                   child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 10),
+                          margin: const EdgeInsets.only(left: 10),
                           child: Text(
                             "Email:",
                             style: GoogleFonts.nunito(
@@ -81,7 +81,7 @@ class SigninView extends GetView<SigninController> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Card(
@@ -97,11 +97,11 @@ class SigninView extends GetView<SigninController> {
                                     borderSide: BorderSide.none)),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 10),
+                          margin: const EdgeInsets.only(left: 10),
                           child: Text(
                             "Password:",
                             style: GoogleFonts.nunito(
@@ -110,7 +110,7 @@ class SigninView extends GetView<SigninController> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Obx(() => Card(
@@ -131,23 +131,24 @@ class SigninView extends GetView<SigninController> {
                                         borderSide: BorderSide.none)),
                               ),
                             )),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             TextButton(
-                                onPressed: () {}, child: Text("Lupa password?"))
+                                onPressed: () {},
+                                child: const Text("Lupa password?"))
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Container(
                           width: double.infinity,
                           height: 45,
-                          margin: EdgeInsets.symmetric(horizontal: 40),
+                          margin: const EdgeInsets.symmetric(horizontal: 40),
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
@@ -160,7 +161,7 @@ class SigninView extends GetView<SigninController> {
                                 style: GoogleFonts.nunito(fontSize: 18),
                               )),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Row(
@@ -174,7 +175,7 @@ class SigninView extends GetView<SigninController> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Row(
@@ -190,7 +191,7 @@ class SigninView extends GetView<SigninController> {
                                   child: SvgPicture.asset(
                                       "assets/images/googleicon.svg")),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 30,
                             ),
                             SizedBox(
@@ -205,18 +206,18 @@ class SigninView extends GetView<SigninController> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 35,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Belum punya akun?"),
+                            const Text("Belum punya akun?"),
                             TextButton(
                                 onPressed: () {
                                   Get.toNamed(Routes.SIGNUP);
                                 },
-                                child: Text("Daftar disini"))
+                                child: const Text("Daftar disini"))
                           ],
                         ),
                       ],

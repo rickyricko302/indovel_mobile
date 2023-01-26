@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:indovel_mobile/app/routes/app_pages.dart';
 
 import '../../../data/themes.dart';
 import '../controllers/signup_controller.dart';
@@ -28,7 +26,7 @@ class SignupView extends GetView<SignupController> {
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 50, left: 20, right: 20),
+                margin: const EdgeInsets.only(top: 50, left: 20, right: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -41,31 +39,31 @@ class SignupView extends GetView<SignupController> {
                             fontWeight: FontWeight.bold),
                       )
                           .animate()
-                          .fadeIn(duration: Duration(seconds: 1))
-                          .moveX(duration: Duration(seconds: 1)),
+                          .fadeIn(duration: const Duration(seconds: 1))
+                          .moveX(duration: const Duration(seconds: 1)),
                     ),
                   ],
                 ),
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(top: 50),
-                  decoration: BoxDecoration(
+                  margin: const EdgeInsets.only(top: 50),
+                  decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(40),
                           topRight: Radius.circular(40))),
                   width: double.infinity,
-                  padding: EdgeInsets.symmetric(horizontal: 35),
+                  padding: const EdgeInsets.symmetric(horizontal: 35),
                   child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 10),
+                          margin: const EdgeInsets.only(left: 10),
                           child: Text(
                             "Nama lengkap:",
                             style: GoogleFonts.nunito(
@@ -74,7 +72,7 @@ class SignupView extends GetView<SignupController> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Card(
@@ -89,11 +87,11 @@ class SignupView extends GetView<SignupController> {
                                     borderSide: BorderSide.none)),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 10),
+                          margin: const EdgeInsets.only(left: 10),
                           child: Text(
                             "Email:",
                             style: GoogleFonts.nunito(
@@ -102,7 +100,7 @@ class SignupView extends GetView<SignupController> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Card(
@@ -118,11 +116,11 @@ class SignupView extends GetView<SignupController> {
                                     borderSide: BorderSide.none)),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 10),
+                          margin: const EdgeInsets.only(left: 10),
                           child: Text(
                             "Password:",
                             style: GoogleFonts.nunito(
@@ -131,7 +129,7 @@ class SignupView extends GetView<SignupController> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Obx(() => Card(
@@ -153,11 +151,11 @@ class SignupView extends GetView<SignupController> {
                                         borderSide: BorderSide.none)),
                               ),
                             )),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 10),
+                          margin: const EdgeInsets.only(left: 10),
                           child: Text(
                             "Konfirmasi password:",
                             style: GoogleFonts.nunito(
@@ -166,7 +164,7 @@ class SignupView extends GetView<SignupController> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         Obx(() => Card(
@@ -187,13 +185,13 @@ class SignupView extends GetView<SignupController> {
                                         borderSide: BorderSide.none)),
                               ),
                             )),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Container(
                           width: double.infinity,
                           height: 45,
-                          margin: EdgeInsets.symmetric(horizontal: 40),
+                          margin: const EdgeInsets.symmetric(horizontal: 40),
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
@@ -204,18 +202,18 @@ class SignupView extends GetView<SignupController> {
                                 style: GoogleFonts.nunito(fontSize: 18),
                               )),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 35,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Sudah punya akun?"),
+                            const Text("Sudah punya akun?"),
                             TextButton(
                                 onPressed: () {
                                   Get.back();
                                 },
-                                child: Text("Kembali login"))
+                                child: const Text("Kembali login"))
                           ],
                         )
                       ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:indovel_mobile/app/data/themes.dart';
 
 import 'app/routes/app_pages.dart';
 

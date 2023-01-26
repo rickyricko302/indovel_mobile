@@ -43,7 +43,7 @@ class WidgetItemNovelTerbaru extends StatelessWidget {
                             "Boy Candra",
                             style: GoogleFonts.nunito(color: Colors.blueGrey),
                           ),
-                          Icon(
+                          const Icon(
                             Icons.favorite_border,
                             size: 20,
                             color: Colors.blueGrey,
@@ -73,7 +73,7 @@ class WidgetItemNovelTerbaru extends StatelessWidget {
                             direction: Axis.horizontal,
                             allowHalfRating: true,
                             itemCount: 5,
-                            itemBuilder: (context, _) => Icon(
+                            itemBuilder: (context, _) => const Icon(
                               Icons.star,
                               color: Colors.amber,
                             ),
@@ -81,7 +81,7 @@ class WidgetItemNovelTerbaru extends StatelessWidget {
                               print(rating);
                             },
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
                           Text(
@@ -90,7 +90,7 @@ class WidgetItemNovelTerbaru extends StatelessWidget {
                                 color: Themes.hitam,
                                 fontWeight: FontWeight.bold),
                           ),
-                          Text("(203)")
+                          const Text("(203)")
                         ],
                       ),
                     ),
@@ -102,11 +102,11 @@ class WidgetItemNovelTerbaru extends StatelessWidget {
                             color: Colors.orange, fontSize: 20),
                       ),
                     ),
-                    Expanded(
+                    const Expanded(
                         child: Align(
                       alignment: Alignment.bottomLeft,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 8),
+                        padding: EdgeInsets.only(left: 8),
                         child: Chip(label: Text("Romansa")),
                       ),
                     ))
