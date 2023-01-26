@@ -3,7 +3,10 @@ import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 import 'package:indovel_mobile/app/data/themes.dart';
-import 'package:indovel_mobile/app/modules/home/views/home_view.dart';
+import 'package:indovel_mobile/app/modules/dashboard/views/favorit/views/favorit_view.dart';
+import 'package:indovel_mobile/app/modules/dashboard/views/home/views/home_view.dart';
+import 'package:indovel_mobile/app/modules/dashboard/views/keranjang/view/keranjang_view.dart';
+import 'package:indovel_mobile/app/modules/dashboard/views/profile/view/profile_view.dart';
 
 import '../controllers/dashboard_controller.dart';
 
@@ -21,7 +24,14 @@ class DashboardView extends GetView<DashboardController> {
             statusBarIconBrightness: Brightness.dark),
       ),
       body: PageView(
-        children: const [HomeView()],
+        physics: const NeverScrollableScrollPhysics(),
+        controller: controller.pageController,
+        children: const [
+          HomeView(),
+          FavoritView(),
+          KeranjangView(),
+          ProfileView()
+        ],
       ),
       bottomNavigationBar: Obx(() => BottomNavigationBar(
               type: BottomNavigationBarType.fixed,

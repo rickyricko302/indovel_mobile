@@ -17,62 +17,67 @@ class WidgetItemPromo extends StatelessWidget {
           left: index == 0 ? 18 : 0, right: index == 4 ? 18 : 0),
       child: Card(
         color: Colors.white,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-              child: Image.network(
-                "https://rickyricko302.github.io/Indovel/assets/img/220px-Laskar_pelangi_sampul.jpg",
-                width: 160,
-                height: 180,
-                fit: BoxFit.cover,
+        elevation: 2,
+        child: InkWell(
+          onTap: () {},
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ClipRRect(
+                borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+                child: Image.network(
+                  "https://rickyricko302.github.io/Indovel/assets/img/220px-Laskar_pelangi_sampul.jpg",
+                  width: 160,
+                  height: 180,
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 5.0),
-              child: Text(
-                "Laskar Pelangi",
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: GoogleFonts.nunito(color: Themes.hitam, fontSize: 16),
+              const SizedBox(
+                height: 5,
               ),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const SizedBox(
-                  width: 5,
+              Padding(
+                padding: const EdgeInsets.only(left: 5.0),
+                child: Text(
+                  "Laskar Pelangi",
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.nunito(color: Themes.hitam, fontSize: 16),
                 ),
-                Text(
-                  "Rp 45.000",
-                  style: GoogleFonts.nunito(color: Colors.orange, fontSize: 16),
-                ),
-                const SizedBox(
-                  width: 5,
-                ),
-                Expanded(
-                  child: Text(
-                    "Rp 45.000",
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: GoogleFonts.nunito(
-                        color: Colors.grey,
-                        fontSize: 12,
-                        decoration: TextDecoration.lineThrough),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const SizedBox(
+                    width: 5,
                   ),
-                )
-              ],
-            )
-          ],
+                  Text(
+                    "Rp 45.000",
+                    style:
+                        GoogleFonts.nunito(color: Colors.orange, fontSize: 16),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Expanded(
+                    child: Text(
+                      "Rp 45.000",
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.nunito(
+                          color: Colors.grey,
+                          fontSize: 12,
+                          decoration: TextDecoration.lineThrough),
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

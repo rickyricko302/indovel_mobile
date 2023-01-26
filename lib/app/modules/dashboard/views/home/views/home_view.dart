@@ -5,24 +5,24 @@ import 'package:indovel_mobile/app/data/themes.dart';
 import 'package:indovel_mobile/app/widgets/item_novel_terbaru.dart';
 import 'package:indovel_mobile/app/widgets/item_promo.dart';
 
-import '../../../widgets/item_top_author.dart';
+import '../../../../../widgets/item_top_author.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
         body: CustomScrollView(
+          physics: ScrollPhysics(),
+          controller: controller.scrollController,
           slivers: [
-            SliverAppBar(
-              elevation: 0,
-              automaticallyImplyLeading: false,
-              backgroundColor: Colors.transparent,
-              toolbarHeight: 180,
-              flexibleSpace: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,31 +57,40 @@ class HomeView extends GetView<HomeController> {
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: Colors.white,
-                          boxShadow: const [
-                            BoxShadow(color: Colors.grey, blurRadius: 2),
-                          ]),
-                      child: TextField(
-                        style: GoogleFonts.nunito(),
-                        decoration: InputDecoration(
-                            hintText: "Cari buku novel yang anda minati",
-                            hintStyle: GoogleFonts.nunito(color: Colors.grey),
-                            prefixIcon: const Icon(Icons.search),
-                            contentPadding:
-                                const EdgeInsets.symmetric(horizontal: 6),
-                            border: const OutlineInputBorder(
-                                borderSide: BorderSide.none)),
-                      ),
-                    )
                   ],
                 ),
               ),
+            ),
+            SliverAppBar(
+              elevation: 0,
+              automaticallyImplyLeading: false,
+              backgroundColor: Colors.transparent,
+              pinned: true,
+              flexibleSpace: Obx(() => AnimatedContainer(
+                    duration: const Duration(milliseconds: 500),
+                    margin: controller.isToolbarPinned.value
+                        ? EdgeInsets.zero
+                        : EdgeInsets.only(left: 20, right: 20),
+                    decoration: BoxDecoration(
+                        borderRadius: controller.isToolbarPinned.value
+                            ? BorderRadius.zero
+                            : BorderRadius.circular(12),
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(color: Colors.grey, blurRadius: 2),
+                        ]),
+                    child: TextField(
+                      style: GoogleFonts.nunito(),
+                      decoration: InputDecoration(
+                          hintText: "Cari buku novel yang anda minati",
+                          hintStyle: GoogleFonts.nunito(color: Colors.grey),
+                          prefixIcon: const Icon(Icons.search),
+                          contentPadding:
+                              const EdgeInsets.symmetric(horizontal: 6),
+                          border: const OutlineInputBorder(
+                              borderSide: BorderSide.none)),
+                    ),
+                  )),
             ),
             SliverToBoxAdapter(
               child: Column(
@@ -169,7 +178,7 @@ class HomeView extends GetView<HomeController> {
                   const SizedBox(
                     height: 5,
                   ),
-                  Container(
+                  SizedBox(
                     height: 100,
                     child: ListView.separated(
                       separatorBuilder: (context, index) {
