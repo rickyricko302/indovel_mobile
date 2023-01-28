@@ -5,8 +5,8 @@ import 'package:indovel_mobile/app/routes/app_pages.dart';
 
 import '../data/themes.dart';
 
-class WidgetItemPromo extends StatelessWidget {
-  const WidgetItemPromo({Key? key, required this.index}) : super(key: key);
+class WidgetItemNovel extends StatelessWidget {
+  const WidgetItemNovel({Key? key, required this.index}) : super(key: key);
   final int index;
   @override
   Widget build(BuildContext context) {
@@ -64,20 +64,6 @@ class WidgetItemPromo extends StatelessWidget {
                     style:
                         GoogleFonts.nunito(color: Colors.orange, fontSize: 16),
                   ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  Expanded(
-                    child: Text(
-                      "Rp 45.000",
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.nunito(
-                          color: Colors.grey,
-                          fontSize: 12,
-                          decoration: TextDecoration.lineThrough),
-                    ),
-                  )
                 ],
               )
             ],

@@ -17,8 +17,8 @@ class SignupView extends GetView<SignupController> {
         appBar: AppBar(
           elevation: 0,
           systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarColor: Themes.merahPrimary,
-          ),
+              statusBarColor: Themes.merahPrimary,
+              statusBarIconBrightness: Brightness.light),
           toolbarHeight: 0,
         ),
         resizeToAvoidBottomInset: false,

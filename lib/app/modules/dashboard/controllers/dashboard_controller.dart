@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:indovel_mobile/app/modules/dashboard/views/favorit/controllers/favorit_controller.dart';
 import 'package:indovel_mobile/app/modules/dashboard/views/home/controllers/home_controller.dart';
 import 'package:indovel_mobile/app/modules/dashboard/views/keranjang/controllers/keranjang_controller.dart';
-import 'package:indovel_mobile/app/modules/dashboard/views/keranjang/view/keranjang_view.dart';
 import 'package:indovel_mobile/app/modules/dashboard/views/profile/controllers/profile_controller.dart';
 
 class DashboardController extends GetxController {

@@ -3,16 +3,16 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  static const HOME = _Paths.HOME;
   static const DASHBOARD = _Paths.DASHBOARD;
   static const SIGNIN = _Paths.SIGNIN;
   static const SIGNUP = _Paths.SIGNUP;
+  static const DETAIL_NOVEL = _Paths.DETAIL_NOVEL;
 }
 
 abstract class _Paths {
   _Paths._();
-  static const HOME = '/home';
   static const DASHBOARD = '/dashboard';
   static const SIGNIN = '/signin';
   static const SIGNUP = '/signup';
+  static const DETAIL_NOVEL = '/detail-novel';
 }
